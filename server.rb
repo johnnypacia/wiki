@@ -8,9 +8,25 @@ module App
 		erb :index
 	end 
 
-	get "/categories/:name" do
+	get "/categories/:id" do
+		@category = Category.find(params[:id])
+		category= Category.find(params[:id])
+		@songs = category.songs
 		erb :categories
 	end
+
+	get "/users/new" do 
+		erb :new_user
+	end
+
+	post "/users" do
+       @user = User.create(name: params["name"], email: params["email"])
+       redirect to "/"
+    end
+
+    get "/login" do
+      erb :login
+    end 
 			
 	# @song = Song.first
 

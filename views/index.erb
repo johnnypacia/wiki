@@ -1,11 +1,11 @@
-<h1>Henrietta's Country/Hip-Hop Cover Band!</h1>
+<h1>Henrietta's Country & Hip-Hop Cover Band!</h1>
 
-<p><a href="/new_user">Sign up</a> to create and edit our music!</p>
+<p><a href="/users/new">Sign up</a> to edit our songs and write an original!</p>
 <p>OR</p>
 <a href="login">Log In</a>
 
 <p>See The Current Catalogue:</p>
 <ul> <% @categories.each do |category| %>
-<li><a href="/categories/<%= category["name"] %>"><%= category["name"] %></a></li>
+<li><a href="/categories/<%= category["id"] %>"><%= category["name"] %> Tunes</a></li>
 <% end %>
 </ul>
