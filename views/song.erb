@@ -6,6 +6,8 @@
 
 <p><%= @song["content"] %></p> -->
 
-<h1><%= @song[:song_title]%></h1>
-<p><%= @song[:song_content] %></p>
-<p><%= @song[:author] %></p>
+<h1><%= @song.title %></h1>
+<p><%= @song.content %></p>
+<p><%= @song.user.name %></p>
+
+<a href="/">Get Back Homeward</a>

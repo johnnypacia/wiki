@@ -46,13 +46,23 @@ module App
       erb :login
     end 
 
+    get "/songs/new" do
+    	erb :new_song
+    end
+    
     get "/songs/:id" do
-    	@this_song = Song.find(params[:id])
-    	@user_name = @this_song.user.name
-    	@song = {song_title: @this_song.title, song_content: @this_song.content, author: @user_name}
+    	renderer = Redcarpet::Render::HTML.new(no_links: true, hard_wrap: true)
+    	markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+    	@song = Song.find(params[:id])
+    	@song.title = markdown.render(@song.title)
+      @song.content = markdown.render(@song.content)
     	erb :song
     end 
-			
+	
+	post "/songs" do
+		song = Song.create({title: params[:title], user_id: session[:user_id], content: params[:content]})
+		redirect to "/songs/#{song.id}"
+	end
 	# @song = Song.first
 
 	# ERB: @song[""]

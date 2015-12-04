@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  var monsterModalButton        = $("#monster-modal-button");
-  var monsterModal              = $(".modal-container.monster");
-  var closeMonsterButton        = $('.close-button.monster');
-  var toggleMonsterModalHandler = function() {
-    monsterModal.toggle();
+  var testModalButton        = $("#modal-button");
+  var testModal              = $(".modal-container.tester");
+  var closeTestModalButton   = $(".close-button.tester");
+  var toggleTestModalHandler = function() {
+    testModal.toggle();
   };
 
-  monsterModalButton.on('click', toggleMonsterModalHandler);
-  closeMonsterButton.on('click', toggleMonsterModalHandler);
+  testModalButton.on('click', toggleTestModalHandler);
+  closeTestModalButton.on('click', toggleTestModalHandler);
 
 });

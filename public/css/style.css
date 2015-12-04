@@ -1,3 +1,7 @@
+body {
+  background: orange;
+}
+
 .modal-container {
   display: none;
   position: fixed;
