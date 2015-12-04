@@ -1,1 +1,11 @@
-song.erb
+<!-- <h1><%= @song["title"] %></h1>
+<h1><%= @song["user-id"] %></h1>
+<h1><%= @song["date_created"] %></h1>
+<h1><%= @song["category_id"] %></h1>
+<h1><%= @song["edit_id"] %></h1>
+
+<p><%= @song["content"] %></p> -->
+
+<h1><%= @song[:song_title]%></h1>
+<p><%= @song[:song_content] %></p>
+<p><%= @song[:author] %></p>

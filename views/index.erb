@@ -1,4 +1,29 @@
+<% if @user %>
+<h1>Howdy <%= @user.name %>! Lookin. Good. For Sure, For Sure Now.</h1>
+<% else %>
 <h1>Henrietta's Country & Hip-Hop Cover Band!</h1>
+<% end %>
+
+<% if @user %>
+
+<p><a href="/song/new">Create a New Tune!</a></p>
+<p><a href="/song/edit">Edit some of ours!</a></p>
+
+ <button id="monster-modal-button">For the modal?</button>
+  <div class="modal-container monster">
+    <div class="modal-content">
+    	<h1>Alright, testing yeah yeah, right on gibberlove!</h1>
+      <button class="close-button monster">X</button>
+    </div>
+  </div>
+
+
+<form action="/sessions" method="POST">
+  <input type="hidden" name="_method" value="delete">
+  <button>Log Out.</button>
+</form>
+
+<% else %>
 
 <p><a href="/users/new">Sign up</a> to edit our songs and write an original!</p>
 <p>OR</p>
@@ -9,3 +34,5 @@
 <li><a href="/categories/<%= category["id"] %>"><%= category["name"] %> Tunes</a></li>
 <% end %>
 </ul>
+
+<% end %>
