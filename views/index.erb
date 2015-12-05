@@ -7,7 +7,7 @@
 <% if @user %>
 
 <p><a href="/songs/new">Create a New Tune!</a></p>
-<p><a href="/song/edit">Edit some of ours!</a></p>
+<p><a href="/songs">Edit some of ours!</a></p>
 
  <button id="modal-button">For the modal, yes?</button>
   <div class="modal-container tester">
@@ -27,8 +27,8 @@
 
 <p><a href="/users/new">Sign up</a> to edit our songs and write an original!</p>
 <p>OR</p>
-<a href="login">Log In</a>
-
+<p><a href="login">Log In</a> if you are already part of the bnad!</p>
+<p>EITHER WAY</p>
 <p>See The Current Catalogue:</p>
 <ul> <% @categories.each do |category| %>
 <li><a href="/categories/<%= category["id"] %>"><%= category["name"] %> Tunes</a></li>

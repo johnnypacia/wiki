@@ -1,0 +1,11 @@
+<% if @user %>
+<h1>Howdy <%= @user.name %>! Edit our shit</h1>
+
+<ul> <% @songs.each do |song| %>
+<li><a href="/songs/<%= song["id"] %>"><%= song["title"] %></a></li>
+<% end %>
+</ul>
+
+<% else %>
+<h1>GET THE FUCK out!</h1>
+<% end %>

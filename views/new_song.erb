@@ -1,9 +1,11 @@
 <h1>Create Song</h1>
 
-<p>You can enter song information as markdown and we'll display it as HTML</p>
+<p>You can enter song information here as markdown and we'll display it as HTML!</p>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Click here to check out a Markdown Guide</a>
 
 <form method="POST" action="/songs">
-	<input type="text" name="title">
-	<textarea name="content" rows="20" cols="100"></textarea>
+	<input type="text" name="title" placeholder= "Song Name">
+	<input type="text" name="category" placeholder= "Hip-Hop or Country?">
+	<textarea name="content" rows="20" cols="100" placeholder "Song Content"></textarea>
 	<input type="submit" value="Create Song">
 </form>

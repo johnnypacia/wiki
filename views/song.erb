@@ -7,7 +7,13 @@
 <p><%= @song["content"] %></p> -->
 
 <h1><%= @song.title %></h1>
+<p>written by: <%= @song.user.name %></p>
 <p><%= @song.content %></p>
-<p><%= @song.user.name %></p>
+<p>created at: <%= @song.date_created %></p>
+
+<% if @user %>
+<a href="/songs/<%= @song.id %>/edit">Edit here, <%= @user.name %>!</a>
+<% else %>
 
 <a href="/">Get Back Homeward</a>
+<% end %>
