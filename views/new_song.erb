@@ -1,7 +1,17 @@
 <h1>Create Song</h1>
 
-<p>You can enter song information here as markdown and we'll display it as HTML!</p>
-<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Click here to check out a Markdown Guide</a>
+<p>You can enter song information here as Markdown and we'll display it as HTML!</p>
+
+<button id="modal-button">Markdown Tips</button>
+	<div class="modal-container tester">
+		<div class="modal-content">
+			<button class ="close-button tester">X</button>
+			<p># = H1</p>
+			<p>*asterisks* = italicize</p>
+			<p>**asterisks** or __underscores__ = embolden</p>
+			<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Click here for more guidelines!</a>
+		</div>
+	</div>
 
 <form method="POST" action="/songs">
 	<input type="text" name="title" placeholder= "Song Name">
@@ -9,3 +19,5 @@
 	<textarea name="content" rows="20" cols="100" placeholder "Song Content"></textarea>
 	<input type="submit" value="Create Song">
 </form>
+
+<a href="/songs">Back</a>

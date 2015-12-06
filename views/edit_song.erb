@@ -1,8 +1,23 @@
 <h1>Edit <%= @song.title %></h1>
 
+<p>Update the songs using Markdown here and we'll show it to the band in HTML!</p>
+
+<button id="modal-button">Markdown tips</button>
+	<div class="modal-container tester">
+		<div class="modal-content">
+			<button class ="close-button tester">X</button>
+			<p># = H1</p>
+			<p>*asterisks* = italicize</p>
+			<p>**asterisks** or __underscores__ = embolden</p>
+			<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Click here for more guidelines!</a>
+		</div>
+	</div>
+
 
 <form method="POST" action="/songs">
 	<input type="text" name="title" value= "<%= @song.title %>">
 	<textarea name="content" rows="20" cols="100"><%= @song.content %></textarea>
-	<input type="submit" value="Edit Song">
+	<input type="submit" value="Submit Edits">
 </form>
+
+<a href="/songs">Back</a>

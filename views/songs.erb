@@ -1,11 +1,14 @@
 <% if @user %>
-<h1>Howdy <%= @user.name %>! Edit our shit</h1>
+<h1>Howdy, <%= @user.name %>! Here's our set</h1>
+<h2>Click on Any Tune To Make Updates:</h2>
 
 <ul> <% @songs.each do |song| %>
 <li><a href="/songs/<%= song["id"] %>"><%= song["title"] %></a></li>
 <% end %>
 </ul>
 
+<a href="/">Get Back Homeward</a>
 <% else %>
-<h1>GET THE FUCK out!</h1>
+<h1>Oops! Please sign up to join the band.</h1>
+<a href="/users/new">Sign up Here</a>
 <% end %>
