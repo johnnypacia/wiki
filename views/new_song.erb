@@ -15,7 +15,11 @@
 
 <form method="POST" action="/songs">
 	<input type="text" name="title" placeholder= "Song Name">
-	<input type="text" name="category" placeholder= "Hip-Hop or Country?">
+	<select name="category">
+		<option value="1">Country</option>
+		<option value="2">Hip-Hop</option>
+	</select>
+	<!-- <input type="text" name="category" placeholder= "Hip-Hop or Country?"> -->
 	<textarea name="content" rows="20" cols="100" placeholder "Song Content"></textarea>
 	<input type="submit" value="Create Song">
 </form>
