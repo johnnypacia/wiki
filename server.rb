@@ -78,7 +78,7 @@ module App
     end 
 
     post "/songs/:id" do
-      song = Song.find(params["id"])
+      song = Song.find(params[:id])
       song.update({title: params[:title], edit_id: params[:edit_id], content: params[:content]})
       # edit = Edit.create({user_id: session[:user_id], edit_content: params[:content], date_edited: DateTime.now})
       redirect to "/songs/#{song.id}"

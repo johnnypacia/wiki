@@ -2,7 +2,7 @@
 <h1>Howdy, <%= @user.name %>! Here's our set</h1>
 <h2>Click on Any Tune To Make Updates:</h2>
 
-<ul> <% @songs.each do |song| %>
+<ul style="list-style-type:none"> <% @songs.each do |song| %>
 <li><a href="/songs/<%= song["id"] %>"><%= song["title"] %></a></li>
 <% end %>
 </ul>
