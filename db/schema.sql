@@ -26,7 +26,7 @@ CREATE TABLE users (
 CREATE TABLE songs (
 	id INTEGER PRIMARY KEY,
 	title VARCHAR,  
-	date_created VARCHAR,
+	date_created DATETIME,
 	user_id INTEGER REFERENCES users(id),
 	edit_id INTEGER REFERENCES edits(id), 
 	category_id INTEGER REFERENCES categories(id),

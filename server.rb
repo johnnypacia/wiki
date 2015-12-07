@@ -10,21 +10,19 @@ module App
   	end 
 
   	post "/sessions" do
-        # Try to find user in DB
         user = User.find_by({name: params[:name]})
         if user
    		    session[:user_id] = user.id
         	redirect to "/"
         else
-          @message = "Incorrect username or password."
           redirect to "/login"
         end 
-    	end
+    end
 
-    	delete "/sessions" do
-        session[:user_id] = nil
-        redirect to "/" 
-      end
+    delete "/sessions" do
+      session[:user_id] = nil
+      redirect to "/" 
+    end
 
     get "/categories/:id" do
     	@category = Category.find(params[:id])
@@ -40,7 +38,7 @@ module App
     post "/users" do
          @user = User.create(name: params["name"], email: params["email"])
          redirect to "/"
-      end
+    end
 
     get "/login" do
       erb :login
@@ -55,6 +53,7 @@ module App
     	renderer = Redcarpet::Render::HTML.new(no_links: true, hard_wrap: true)
     	markdown = Redcarpet::Markdown.new(renderer, extensions = {})
     	@song = Song.find(params[:id])
+      @edit = @song.edits
     	@song.title = markdown.render(@song.title)
       @song.content = markdown.render(@song.content)
 
@@ -78,14 +77,12 @@ module App
       erb :edit_song
     end 
 
-    post "/songs" do
-      edit = Edit.create({user_id: session[:user_id], edit_content: params[:content], song_id: params[:song_id], date_edited: DateTime.now})
+    post "/songs/:id" do
+      song = Song.find(params["id"])
+      song.update({title: params[:title], edit_id: params[:edit_id], content: params[:content]})
+      # edit = Edit.create({user_id: session[:user_id], edit_content: params[:content], date_edited: DateTime.now})
       redirect to "/songs/#{song.id}"
     end
-
-	# @song = Song.first
-
-	# ERB: @song[""]
 
 	end #server
 end #module

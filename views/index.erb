@@ -1,13 +1,13 @@
 <% if @user %>
-<h1>Howdy <%= @user.name %>! Lookin. Good. For Sure, For Sure Now.</h1>
+<h1>Howdy <%= @user.name %>!</h1>
 <% else %>
-<h1>Henrietta's Country & Hip-Hop Cover Band!</h1>
+<h1>Henrietta's Country & Hip-Hop Cover Band</h1>
 <% end %>
 
 <% if @user %>
 
-<p><a href="/songs/new">Create a New Tune!</a></p>
-<p><a href="/songs">Edit some of ours!</a></p>
+<p><a href="/songs/new">Create a New Tune</a></p>
+<p><a href="/songs">Edit Some of Ours</a></p>
 
 <form action="/sessions" method="POST">
   <input type="hidden" name="_method" value="delete">
@@ -18,10 +18,10 @@
 
 <p><a href="/users/new">Sign up</a> to edit our songs and write an original!</p>
 <p>OR</p>
-<p><a href="login">Log In</a> if you are already part of the bnad!</p>
+<p><a href="login">Log In</a> if you are already in the band!</p>
 <p>EITHER WAY</p>
 <p>See The Current Catalogue:</p>
-<ul> <% @categories.each do |category| %>
+<ul style="list-style-type:none"> <% @categories.each do |category| %>
 <li><a href="/categories/<%= category["id"] %>"><%= category["name"] %> Tunes</a></li>
 <% end %>
 </ul>

@@ -8,11 +8,17 @@
 
 <h1><%= @song.title %></h1>
 <p>written by: <%= @song.user.name %></p>
+<p>contact email: <%= @song.user.email %></p>
 <p><%= @song.content %></p>
 <p>created at: <%= @song.date_created %></p>
+<p>last version added: 
+</p>
+
 
 <% if @user %>
 <a href="/songs/<%= @song.id %>/edit">Edit here, <%= @user.name %>!</a>
+
+<a href="/songs">Back</a>
 <% else %>
 
 <a href="/">Get Back Homeward</a>

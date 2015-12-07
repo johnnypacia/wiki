@@ -1,6 +1,6 @@
 
 <h1><%= @category["name"] %> Tunes</h1>
-<ul> <% @songs.each do |song| %>
+<ul style="list-style-type:none"> <% @songs.each do |song| %>
 <li><a href="/songs/<%= song["id"] %>"><%= song["title"] %></a></li>
 <% end %>
 </ul>

@@ -1,6 +1,29 @@
 body {
-  background: orange;
+  background: url("/img/background.jpg") no-repeat;
+  color: white;
+  font-family: Arial;
+  text-align: center;
 }
+
+a:link {
+    color: yellow;
+}
+
+a:visited {
+    color: orange;
+}
+
+
+#modal-button {
+  background: #3463d9;
+  border-radius: 11px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: dotted #204a8a 4px;
+}
+
 
 .modal-container {
   display: none;
@@ -13,6 +36,7 @@ body {
 }
 
 .modal-content {
+  color: black;
   position: relative;
   top: 33%;
   background-color: white;
