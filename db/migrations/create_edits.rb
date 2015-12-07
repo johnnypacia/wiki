@@ -15,4 +15,4 @@ class CreateEdits <ActiveRecord::Migration
 	end
 end #class
 
-CreateUsers.migrate(ARGV[0])
+CreateEdits.migrate(ARGV[0])
