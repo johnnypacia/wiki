@@ -3,10 +3,10 @@ class Song < ActiveRecord::Base
 	belongs_to :user
 	has_many :edits
 	def last_version_date 
-		if edits.last 
-			edits.last.date_edited 
+		if self.edits.last 
+			self.edits.last.date_edited 
 		else 
-			date_created
+			self.date_created
 		end 
 	end 
 end
