@@ -26,10 +26,11 @@ Welcome to the wiki for Henrietta's Country & Hip-Hop band! Henrietta wants all 
 - Markdown/redcarpet 
 
 ##Front-End Wire Frame:
+<img src="public/img/wireframe.png"/>
 
 ##ERD:
 <img src="public/img/erd.png"/>
 
-##Link to Page
+##Link to Page:
 
-Click [here](https://obscure-refuge-1439.herokuapp.com/) To go to Wiki!
+Click [here](https://obscure-refuge-1439.herokuapp.com/) to go to Henrietta's Wiki!
