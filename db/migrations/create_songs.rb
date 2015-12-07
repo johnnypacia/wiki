@@ -1,6 +1,6 @@
 require_relative "../config"
 
-class CreateSongs <ActiveRedcord::Migration
+class CreateSongs <ActiveRecord::Migration
 	def up
 		create_table :songs do |t|
 			t.string(:title)
