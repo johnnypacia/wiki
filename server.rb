@@ -81,9 +81,8 @@ module App
 
       song = Song.find(params[:id])
       song.update({title: params[:title], category_id: params[:category], edit_id: params[:edit_id], content: params[:content]})
-      Edit.create({user_id: session[:user_id], song_id: params[:song_id], edit_content: params[:content], date_edited: DateTime.now})
-      edit = Edit.find(params[:song_id])
-      edit.date_edited
+      Edit.create({user_id: session[:user_id], song_id: params[:id], edit_content: params[:content], date_edited: DateTime.now})
+
       redirect to "/songs/#{song.id}"
     end
 

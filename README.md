@@ -3,7 +3,7 @@
 ## Henrietta's Country & Hip-Hop Cover Band Wiki!
 
 ##Description:
-Welcome to the wiki for Henrietta's Country & Hip-Hop band! Henrietta wants all her band mates to keep track of current versions of their set. Incidentally, she is also looking for new band members. So feel free to sign up and join the band! If you do, you'll be able to make changes to the current versions of their songs. And when the muse strikes you, you'll be able to create a song of your own and add it to our set-list! 
+Welcome to the wiki for Henrietta's Country & Hip-Hop band! Henrietta wants all her band mates to keep track of current versions of their set. Incidentally, she is also looking for new band members. So feel free to sign up and join the band! If you do, you'll be able to make changes to the current versions of our songs. And when the muse strikes you, you'll be able to create a song of your own and add it to our set-list! 
 
 
 ##User Stories:
