@@ -28,7 +28,7 @@ Welcome to the wiki for Henrietta's Country & Hip-Hop band! Henrietta wants all 
 ##Front-End Wire Frame:
 
 ##ERD:
-<img src="public/img/erd.jpg"/>
+<img src="public/img/erd.png"/>
 
 ##Link to Page
 
