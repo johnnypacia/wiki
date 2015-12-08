@@ -17,6 +17,12 @@ a:link {
     color: yellow;
 }
 
+.input-button {
+  margin: auto;
+  display: block;
+}
+
+
 a:visited {
     color: orange;
 }
